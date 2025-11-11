@@ -4,6 +4,20 @@
   "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./init": {
+      "require": "./dist/init.js",
+      "types": "./dist/init.d.ts"
+    },
+    "./loader": {
+      "require": "./dist/loader.js",
+      "types": "./dist/loader.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "prebuild": "rimraf dist"
