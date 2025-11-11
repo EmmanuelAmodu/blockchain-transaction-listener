@@ -15,15 +15,14 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "dev:on-chain-activity-listener": "turbo run dev --filter=on-chain-activity-listener... --concurrency 18",
+    "dev:activity-listener": "turbo run dev --filter=activity-listener... --concurrency 18",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "change": "changeset && changeset version && npm i && git add . && git commit -am 'Bump package version'",
     "change:check": "npx @changesets/cli status --since='origin/master'",
     "change:publish": "changeset publish",
     "test": "turbo run test --concurrency=3",
-    "test:e2e": "turbo run test:e2e",
-    "gcloud-login": "gcloud auth login --update-adc"
+    "test:e2e": "turbo run test:e2e"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.7",

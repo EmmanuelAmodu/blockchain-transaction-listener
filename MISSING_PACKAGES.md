@@ -46,5 +46,5 @@ Location: `packages/eslint-config/`
 ## Next Steps
 
 1. Build the packages: `npm run build`
-2. Start development: `npm run start:dev` or `npm run dev:on-chain-activity-listener`
+2. Start development: `npm run start:dev` or `npm run dev:activity-listener`
 3. The stub packages provide minimal functionality - you may need to enhance them based on your requirements

@@ -1,4 +1,4 @@
-# on-chain-activity-listener
+# activity-listener
 
 ## 0.0.2
 

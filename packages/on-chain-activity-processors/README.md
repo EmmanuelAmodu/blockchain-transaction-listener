@@ -1,6 +1,6 @@
 # On-chain Activity Processors
 
-Shared processor implementations that transform provider-specific transaction payloads into a common OnChainActivity shape. Intended for reuse across services like on-chain-activity-listener and wallets-api.
+Shared processor implementations that transform provider-specific transaction payloads into a common OnChainActivity shape. Intended for reuse across services like activity-listener and wallets-api.
 
 ## Usage
 
