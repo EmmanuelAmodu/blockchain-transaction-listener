@@ -1,12 +1,9 @@
 import { NestFactory } from '@nestjs/core';
-import { INestApplication, VersioningType } from '@nestjs/common';
+import { INestApplication, VersioningOptions } from '@nestjs/common';
 
 export interface MoonPayNestAppOptions {
   bufferLogs?: boolean;
-  versioning?: {
-    defaultVersion: string;
-    type: VersioningType;
-  };
+  versioning?: VersioningOptions;
   microservices?: any[];
 }
 
@@ -18,7 +15,7 @@ export async function createMoonPayNestApp(
     bufferLogs: options.bufferLogs ?? false,
   });
 
-  if (options.versioning) {
+  if (options.versioning !== undefined) {
     app.enableVersioning(options.versioning);
   }
 

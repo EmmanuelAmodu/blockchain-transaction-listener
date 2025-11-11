@@ -1,9 +1,2 @@
-// DataDog module stub
-export class DataDogModule {
-  static forRoot() {
-    return {
-      module: DataDogModule,
-      global: true,
-    };
-  }
-}
+export * from 'nestjs-ddtrace';
+export { DataDogModule } from './loader';

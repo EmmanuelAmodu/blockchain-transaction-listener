@@ -96,6 +96,21 @@ export class PubSubStrategy extends Server implements CustomTransportStrategy {
   }
 
   /**
+   * Required by Server interface - handles subscription to events
+   */
+  public on(pattern: any, callback: Function): void {
+    // This implementation is not needed for PubSub strategy
+    // as we handle subscriptions through the listen method
+  }
+
+  /**
+   * Required by Server interface - unwraps the handler
+   */
+  public unwrap<T>(): T {
+    return this as any;
+  }
+
+  /**
    * This method is triggered when we receive a message
    */
   private async handleMessage(message: Message, handler: PubSubHandler) {

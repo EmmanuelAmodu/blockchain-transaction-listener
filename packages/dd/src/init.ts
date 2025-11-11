@@ -1,3 +1,8 @@
-// DataDog initialization stub
-// In production, this would initialize DataDog APM
-console.log('DataDog initialization (stub)');
+import tracer from 'dd-trace';
+
+tracer.init();
+
+const blocklist = [/\/(v\d+\/)?health\/?$/];
+
+tracer.use('express', { blocklist });
+tracer.use('fastify', { blocklist });
