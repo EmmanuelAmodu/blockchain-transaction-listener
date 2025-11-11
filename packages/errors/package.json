@@ -1,0 +1,30 @@
+{
+  "name": "@onionfi-internal/errors",
+  "version": "1.1.0",
+  "description": "",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^11.1.8",
+    "lodash": "4.17.21",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.186",
+    "@types/node": "16.18.0",
+    "eslint-config-onionfi": "*",
+    "prettier": "2.8.7",
+    "tsconfig": "*",
+    "tsconfig-paths": "4.1.0",
+    "typescript": "5.0.4"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@onionfi-internal/pubsub-client",
+  "version": "2.2.0",
+  "description": "PubSub client for onionfi services",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "test": "jest --forceExit",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/pubsub": "4.10.0",
+    "@nestjs/cache-manager": "3.0.1",
+    "@nestjs/cli": "11.0.10",
+    "@nestjs/common": "^11.1.8",
+    "@nestjs/config": "4.0.2",
+    "@nestjs/core": "^11.1.8",
+    "@nestjs/microservices": "^11.1.8",
+    "@nestjs/platform-express": "11.1.8",
+    "@nestjs/platform-fastify": "^11.1.8",
+    "@nestjs/swagger": "7.4.2",
+    "@nestjs/testing": "11.1.8",
+    "fastify": "4.17.0",
+    "nestjs-ddtrace": "6.0.0",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "7.5.7",
+    "tronweb": "6.1.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@jest/globals": "29.2.2",
+    "@types/jest": "29.2.0",
+    "@types/node": "16.18.0",
+    "eslint-config-onionfi": "*",
+    "jest": "29.2.2",
+    "jest-config": "*",
+    "ts-jest": "29.0.3",
+    "tsconfig": "*",
+    "typescript": "5.0.4"
+  }
+}

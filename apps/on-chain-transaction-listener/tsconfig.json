@@ -1,0 +1,22 @@
+{
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+    "rootDir": ".",
+  },
+  "exclude": [
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../../packages/nestjs-typeorm/tsconfig.reference.json"
+    },
+    {
+      "path": "../../packages/nestjs/tsconfig.reference.json"
+    },
+    {
+      "path": "../../packages/testing/tsconfig.reference.json"
+    },
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "eslint-config-onionfi",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-prettier": "8.5.0"
+  }
+}

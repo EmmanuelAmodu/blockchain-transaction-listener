@@ -1,0 +1,70 @@
+{
+  "name": "moonpay-services",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/**",
+    "apps/**/*",
+    "packages/*",
+    "packages/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moonpay/moonpay-services.git"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:on-chain-activity-listener": "turbo run dev --filter=on-chain-activity-listener... --concurrency 18",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "change": "changeset && changeset version && npm i && git add . && git commit -am 'Bump package version'",
+    "change:check": "npx @changesets/cli status --since='origin/master'",
+    "change:publish": "changeset publish",
+    "test": "turbo run test --concurrency=3",
+    "test:e2e": "turbo run test:e2e",
+    "gcloud-login": "gcloud auth login --update-adc"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "eslint": "8.56.0",
+    "google-artifactregistry-auth": "3.0.2",
+    "husky": "8.0.3",
+    "lint-staged": "13.0.3",
+    "prettier": "2.8.7",
+    "turbo": "2.5.8",
+    "typescript": "5.0.4"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.sol": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.19.0"
+  },
+  "overrides": {
+    "rpc-websockets": "7.10.0",
+    "@solana/web3.js": "1.91.6"
+  },
+  "packageManager": "npm@10.2.3",
+  "dependencies": {
+    "@nestjs/cache-manager": "3.0.1",
+    "@nestjs/cli": "11.0.10",
+    "@nestjs/common": "11.1.8",
+    "@nestjs/config": "4.0.2",
+    "@nestjs/core": "11.1.8",
+    "@nestjs/microservices": "11.1.8",
+    "@nestjs/platform-express": "11.1.8",
+    "@nestjs/platform-fastify": "11.1.8",
+    "@nestjs/swagger": "7.4.2",
+    "@nestjs/testing": "11.1.8",
+    "nestjs-ddtrace": "6.0.0",
+    "tronweb": "6.1.0",
+    "zod": "3.25.76"
+  }
+}
