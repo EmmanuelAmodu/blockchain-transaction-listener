@@ -1,8 +1,8 @@
 import '@onionfi-internal/dd/init';
 
 import {
-  createonionfiNestApp,
-  onionfiNestAppOptions,
+  createMoonPayNestApp,
+  MoonPayNestAppOptions,
 } from '@onionfi-internal/nestjs';
 import { PubSubStrategy } from '@onionfi-internal/pubsub-server';
 import { VersioningType } from '@nestjs/common';
@@ -15,7 +15,7 @@ import { AppModule } from './app.module';
 import { ConfigUtil } from './common/config/config.util';
 
 async function bootstrap(): Promise<void> {
-  const appOptions: onionfiNestAppOptions = {
+  const appOptions: MoonPayNestAppOptions = {
     bufferLogs: true,
     versioning: {
       defaultVersion: '1',
@@ -23,7 +23,7 @@ async function bootstrap(): Promise<void> {
     },
   };
 
-  const httpApp = await createonionfiNestApp(AppModule, {
+  const httpApp = await createMoonPayNestApp(AppModule, {
     ...appOptions,
     microservices: [
       [
